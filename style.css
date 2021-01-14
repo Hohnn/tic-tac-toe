@@ -70,6 +70,7 @@ body {
   text-align: center;
   text-decoration: none;
   color: white;
+  cursor: pointer;
 }
 
 .button:hover {
