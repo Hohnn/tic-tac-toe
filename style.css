@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Texturina&display=swap");
+
+body {
+  height: 100%;
+  font-family: "Texturina", serif;
+  background-color: #202020;
+  color: white;
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.morpion {
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+
+  padding: 1px;
+  margin: 0 auto;
+  width: 300px;
+}
+
+.line {
+  display: flex;
+  justify-content: center;
+}
+
+.case {
+  width: 100px;
+  height: 100px;
+  background-color: #202020;
+  margin: 1px;
+  cursor: pointer;
+}
+.case:hover {
+  background-color: rgba(220, 220, 220, 0);
+}
+
+.active {
+  background-image: url(/images/cyrcle.svg);
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: center;
+}
+.notactive {
+  background-image: url(/images/cross.svg);
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-position: center;
+}
+
+.button {
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.137);
+  border: none;
+  margin: 30px auto;
+  display: block;
+  transition-duration: 1s;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding-top: 5px;
+  width: 250px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+.button:hover {
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+}
+
+.desc {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.desc img {
+  width: 1.3rem;
+  color: white;
+}
+
+header {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.win {
+  background-color: yellowgreen;
+}
+
+footer {
+  text-align: end;
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+}
