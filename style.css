@@ -43,13 +43,13 @@ body {
 }
 
 .active {
-  background-image: url(images/cyrcle.svg);
+  background-image: url("images/cyrcle.svg");
   background-repeat: no-repeat;
   background-size: 70%;
   background-position: center;
 }
 .notactive {
-  background-image: url(images/cross.svg);
+  background-image: url("images/cross.svg");
   background-repeat: no-repeat;
   background-size: 90%;
   background-position: center;
