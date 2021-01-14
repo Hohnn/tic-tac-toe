@@ -37,15 +37,15 @@ function border()
 
 click();
 
-function win ()
-{
-    let id = document.getElementById('box0').classList
-    let id2 = document.getElementById('box1').classList
-    let id3 = document.getElementById('box2').classList
-    let ids = [id, id2, id3]
-    console.log(id.value)
-    console.log(ids)
-    if(id.contains('active')){
-        id.add('win');
-    }
-}
+// function win ()
+// {
+//     let id = document.getElementById('box0').classList
+//     let id2 = document.getElementById('box1').classList
+//     let id3 = document.getElementById('box2').classList
+//     let ids = [id, id2, id3]
+//     console.log(id.value)
+//     console.log(ids)
+//     if(id.contains('active')){
+//         id.add('win');
+//     }
+// }
