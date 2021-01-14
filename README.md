@@ -1,2 +1,2 @@
 # tic-tac-toe
-mini game
+Hi, i create a simple mini game for learning and praticing javascript
