@@ -26,7 +26,7 @@ function border()
         }
         // console.log(elements[i].classList.contains('active'))
         // console.log(elements[i].classList)
-        win()       
+        // win()       
     }   
         
     }
