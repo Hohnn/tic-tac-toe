@@ -28,7 +28,7 @@ function test  (event) {
         event.target.classList.add("active")
         tour = false;
     }
-    console.log(tour)
+    console.log('Corey le Boss')
     winConditionTopLine()
     winConditionMidLine()
     winConditionBotLine()
@@ -61,7 +61,6 @@ function winConditionTopLine() {
     }
 }
 function winConditionMidLine() {
-    console.log(id4, id5, id6)
     if (event.target.id == 'box3' || event.target.id == 'box4' || event.target.id == 'box5') {
         if ((id4.contains('active') && id5.contains('active') && id6.contains('active')) || (id4.contains('notactive') && id5.contains('notactive') && id6.contains('notactive'))) {
             id4.add('win'); id5.add('win'); id6.add('win')
