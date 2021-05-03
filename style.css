@@ -42,13 +42,13 @@ body {
   background-color: rgba(220, 220, 220, 0);
 }
 
-.active {
+.cyrcle {
   background-image: url("images/cyrcle.svg");
   background-repeat: no-repeat;
   background-size: 70%;
   background-position: center;
 }
-.notactive {
+.cross {
   background-image: url("images/cross.svg");
   background-repeat: no-repeat;
   background-size: 90%;
