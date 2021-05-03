@@ -1,18 +1,41 @@
 const cases = document.querySelectorAll('.case')
 let a = 0
+let win = 0
+function winStop() {
+    for (let i = 0; i < cases.length; i++) {
+        if (cases[i].classList.contains('win')) {
+            win = 1
+            console.log('hhh')
+            return win
+        }
+        
+    }
+}
+
 cases.forEach((item,index) => {
-    item.addEventListener('click', ()=> {        
-        if (a == 0 && cases[index].classList == 'case' ) {
-            cases[index].classList.add('cyrcle')
-            /* a = 1 */
-        }/*  else if (cases[index].classList == 'case') {
-            cases[index].classList.add('cross')
-            a = 0
-        } */
-        winCondition(index)
-        diago()
-        bot(index, cases)
+    item.addEventListener('click', ()=> {
+            console.log(item)
+        if (win > 0) {
+            console.log('ouueazue')
+        } else {
+            if (a == 0 && cases[index].classList == 'case' ) {
+                cases[index].classList.add('cyrcle')
+                /* a = 1 */
+            }/*  else if (cases[index].classList == 'case') {
+                cases[index].classList.add('cross')
+                a = 0
+            } */
+            
+            diago()
+            bot(index, cases)
+            winStop()
+            winCondition(index)     
+        }
+        
+        
     })
+
+    
 })
 
 function diago() {
@@ -40,11 +63,13 @@ function diago() {
     if (crossCheck == 3 || cyrcleCheck == 3) {
         diago1.forEach(cases => {
             cases.classList.add('win')
+            win = 1
         })
     }
     if (crossCheck2 == 3 || cyrcleCheck2 == 3) {
         diago2.forEach(cases => {
             cases.classList.add('win')
+            win = 1
         })
     }  
 
@@ -119,11 +144,53 @@ function winCondition(targetIndex) {
     }
     
 }
-
+let round = 0
 function bot(targetIndex, item) {
-    let random = Math.floor(Math.random() * 8)
-    console.log(random)
+    let arr = []
+    let arrRond = []
+    console.log(arrRond)
+    console.log(round)
     
+    item.forEach(cases => {
+        if (cases.classList == "case") {
+            arr.push(cases)
+        }        
+        if (cases.classList == "case cyrcle") {
+            arrRond.push(cases)
+        }        
+    })
+    let random = Math.floor(Math.random() * arr.length)
+    console.log(arr)
+    /* arr[random].classList.add('cross') */
+
+    /* if (item[random].classList == 'case') {
         item[random].classList.add('cross')
+    } else {
+        random++
+        if (item[random].classList == 'case') {
+            item[random].classList.add('cross')
+        }
+        
+    }  */
+    if (round == 0 && targetIndex != 4 && item[4].classList == 'case') {      
+        item[4].classList.add('cross')
+        console.log('round0')
+        round = 2       
+    } else if ( round == 0){
+        arr[random].classList.add('cross')
+        round++
+        console.log('round00')
+    }   
     
+    if ( round == 1) {
+        if (targetIndex < 6) {
+            item[targetIndex+3].classList.add('cross')
+        } else {
+            arr[0].classList.add('cross')
+        }
+        
+    }/*  else if (arr.length < 8) {
+        arr[random].classList.add('cross')
+    } */
+    round = 1
 }
